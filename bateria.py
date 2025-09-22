@@ -4,9 +4,12 @@ class bateria:
         self.marca = marca
         self.porcentaje_actual = porcentaje_actual
 
-        def mostrar_porcentaje_actual(self):
-            if porcentaje_actual == 0:
-                print(f"La batería está completamente descargada.")
+    def get_porcentaje(self):
+        return self.porcentaje_actual
+
+    def mostrar_porcentaje(self):
+        if self.get_porcentaje() == 0:
+            print(f"La batería está completamente descargada.")
             
-            else:
-                print(f"El porcentaje de batería actual es {self.porcentaje_actual}%.")
+        else:
+            print(f"El porcentaje de batería actual es {self.porcentaje_actual}%.")
