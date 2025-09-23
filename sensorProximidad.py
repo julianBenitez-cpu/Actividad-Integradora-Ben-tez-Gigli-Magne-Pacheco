@@ -1,4 +1,4 @@
-import sensor
+from sensor import sensor
 
 class sensorProximidad(sensor):
 
