@@ -9,7 +9,7 @@ class bateria:
 
     def mostrar_porcentaje(self):
         if self.__get_porcentaje() == 0:
-            print(f"La batería está completamente descargada.")
+            print(f"La batería está completamente descargada..")
         else:
             print(f"El porcentaje de batería actual es {self.porcentaje_actual}%.")
     def mostrar_atributos(self):
