@@ -7,8 +7,8 @@ class robot:
         self.__fechaFabricacion = fechaFabricacion
         self.__modelo = modelo
         self.__numeroSerie = numeroSerie
-        self.__sensor = sensorProximidad("SP-100", "RoboSensors", "SP123456", "2023-01-01", 5.0) 
-        self.__circuito = CircuitoIntegrado()
+        self.sensor = sensorProximidad("SP-100", "RoboSensors", "SP123456", "2023-01-01", 5.0) 
+        self.circuito = CircuitoIntegrado()
 
     def get_numeroSerie_robot(self):
         return self.__numeroSerie
@@ -40,9 +40,6 @@ class robot:
     def set_numeroSerie_robot(self, numeroSerie):
         self.__numeroSerie = numeroSerie
 
-    def mostrar_informacion_robot(self):
-        return f"Nombre: {self.__nombre}, Color: {self.__color}, Fecha de Fabricacion: {self.__fechaFabricacion}, Modelo: {self.__modelo} con Nº de Serie: {self.__numeroSerie}, Sensor: [{self.__sensor} ], Circuito: [{self.__circuito.estado_circuito()}]"
+    def __str__(self):
+        return f"Nombre: {self.get_nombre_robot()}, Color: {self.get_color_robot()}, Fecha de Fabricacion: {self.get_fechaFabricacion_robot()}, Modelo: {self.get_modelo_robot()} con Nº de Serie: {self.get_numeroSerie_robot}, Sensor: [{self.sensor}], Circuito: [{self.circuito.estado_circuito()}]"
     
-
-robot1 = robot("Robo1", "Rojo", "2023-01-01", "X100", "12345")
-print(robot1.mostrar_informacion_robot())
