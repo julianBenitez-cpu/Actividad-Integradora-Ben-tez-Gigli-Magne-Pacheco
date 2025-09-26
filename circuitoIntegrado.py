@@ -21,8 +21,8 @@ class CircuitoIntegrado:
 
     def consumir_energia(self, cantidad):
         if self.__estado == "encendido":
-            if self.bateria.get_porcentaje() >= cantidad
-                self.bateria._porcentaje -= cantidad
+            if self.bateria.get_porcentaje() >= cantidad:
+                self.bateria._porcentaje_actual -= cantidad
                 return f"Se Consumio{cantidad}%. Batería restante: {self.bateria.get_porcentaje()}%"
             else:
                 self.__apagar()
